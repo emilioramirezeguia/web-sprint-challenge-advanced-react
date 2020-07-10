@@ -30,13 +30,39 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+- Declare a new class by extending React's base component
+- Set up the class constructor and inherit the base component's properties and methods by calling super();
+- Declare the state object with the state properties you need and set their initial values to your desired data type
+- Call the render function and return your JSX
+
 2. Describe the different phases of the component lifecycle.
+
+- Mounting, Updating, and Unmouting
+- First a component is reated with the initial specifications in your constructor and return statement
+- It's mounted to the virtual DOM through the render method
+- React then updates the "real" DOM with all those nodes/elements
+- If changes in the component are detected, the render function compares the new virtual DOM with the old one and only updates the "real" DOM with those specific changes
+- You can use the unmounting to clean up any event listeners/subscriptions attached to the DOM to avoid crashes
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+- componentedDidMout() to hold external data and make sure the user sees something on screen quickly while the initial data loads up
+- componendDidUpdate() to keep track of when the component's state changes and calls the render function again to display a new user interface based on data that changed
+- componentWillUnmount() to remove any event listeners/subscriptions added to the DOM after it's finished serving its purpose
+
 4. Define stateful logic.
 
+- It's logic that doesn't have anything to do with the visual part of your component
+- It usually deals with any interaction that's able to update the state of the component
+- But it can also be functions that handle other types of events that don't deal with state
+
 5. Describe how to test a React component with React Testing Library.
+
+- The point of this kind of teting is to put ourselves in a user's shoes and make sure whatever is on screen fucntions the way the user expects
+- First, describe what you're going to test. Make it something meaningful
+- Then, Arrange the proper data you're going to be working on by rendering the component and getting a hold of the visual elements you want to test
+- Afterwards, Act on that data by simulating user interactions such as inputting text or submitting a form
+- Finally, Assert the result you're looking for by confirming the expected behavior happens
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
